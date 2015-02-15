@@ -57,21 +57,21 @@ public class Dog {
   }
 
   public void bark() {
-    System.out.print("Whoof!");
+    System.out.println("Whoof!");
   }
 
   public void whineForFood() {
-    System.out.print("Feed me, or I will eat your sandwich!");
+    System.out.println("Feed me, or I will eat your sandwich!");
   }
 
   public void eat() {
     this.speed = 0.0;
-    System.out.print("Munch, munch!");
+    System.out.println("Munch, munch!");
   }
 
   public void sleep() {
     this.speed = 0.0;
-    System.out.print("Zzzzzz");
+    System.out.println("Zzzzzz");
   }
       
   public void aDogsDay() {
