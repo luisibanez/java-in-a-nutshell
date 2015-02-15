@@ -49,6 +49,13 @@ public class DogTest
         assertTrue( spot.age() == 5 );
         System.out.println("PASSED!");
 
+        System.out.print("Testing speed methods...");
+        spot.setSpeed(1.2);
+        assertTrue( spot.speed() == 1.2 );
+        spot.setSpeed(1.7);
+        assertTrue( spot.speed() == 1.7 );
+        System.out.println("PASSED!");
+
         System.out.print("Testing hair color methods...");
         spot.setHairColor(Dog.HairColor.BLACK);
         assertTrue( spot.hairColor() == Dog.HairColor.BLACK );
@@ -67,6 +74,32 @@ public class DogTest
         assertTrue( spot.hairLength() == Dog.HairLength.LONG );
         spot.setHairLength(Dog.HairLength.VERYLONG);
         assertTrue( spot.hairLength() == Dog.HairLength.VERYLONG );
+        System.out.println("PASSED!");
+    }
+
+    /**
+     * Activities Tests
+     */
+    public void testDogActivities()
+    {
+        Dog spot = new Dog();
+
+        System.out.print("Testing activity methods...");
+        spot.sit();
+        assertTrue( spot.speed() < 0.1 );
+        spot.walk();
+        assertTrue( spot.speed() == 1.4 );
+        spot.sleep();
+        assertTrue( spot.speed() < 0.1 );
+        spot.walk();
+        assertTrue( spot.speed() == 1.4 );
+        spot.sit();
+        assertTrue( spot.speed() == 0.0 );
+
+        spot.whineForFood();
+        spot.eat();
+        spot.bark();
+
         System.out.println("PASSED!");
     }
 }

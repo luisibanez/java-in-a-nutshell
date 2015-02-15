@@ -56,6 +56,14 @@ public class Dog {
     this.speed = 1.4;   // set walking speed
   }
 
+  public void sit() {
+    this.speed = 0.0;   //  stop moving
+  }
+
+  public void sleep() {
+    this.speed = 0.0;
+    System.out.println("Zzzzzz");
+  }
   public void bark() {
     System.out.println("Whoof!");
   }
@@ -69,10 +77,6 @@ public class Dog {
     System.out.println("Munch, munch!");
   }
 
-  public void sleep() {
-    this.speed = 0.0;
-    System.out.println("Zzzzzz");
-  }
       
   public void aDogsDay() {
     this.sleep();
@@ -80,11 +84,16 @@ public class Dog {
     this.eat();
     this.walk();
     this.bark();
+    this.sit();
     this.sleep();
   }
 
   public double speed() {
     return this.speed;
+  }
+
+  public void setSpeed(double speed) {
+    this.speed = speed;
   }
 
 }
