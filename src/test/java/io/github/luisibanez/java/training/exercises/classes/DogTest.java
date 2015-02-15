@@ -88,11 +88,11 @@ public class DogTest
         spot.sit();
         assertTrue( spot.speed() < 0.1 );
         spot.walk();
-        assertTrue( spot.speed() == 1.4 );
+        assertTrue( spot.speed() == Dog.walkingSpeed() );
         spot.sleep();
         assertTrue( spot.speed() < 0.1 );
         spot.walk();
-        assertTrue( spot.speed() == 1.4 );
+        assertTrue( spot.speed() == Dog.walkingSpeed() );
         spot.sit();
         assertTrue( spot.speed() == 0.0 );
 

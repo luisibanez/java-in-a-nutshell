@@ -5,9 +5,23 @@ package io.github.luisibanez.java.training.exercises.classes;
 
 public class Dog {
 
-  double weight;   // measured in poinds
-  int age;         // measured in integer years
-  double speed;    // measured in meters per second
+  private double weight;   // measured in poinds
+  private int age;         // measured in integer years
+  private double speed;    // measured in meters per second
+
+  private static double walkingSpeed = 1.4;
+
+  public static double walkingSpeed() {
+    return walkingSpeed;
+  }
+
+  public static void bark() {
+    System.out.println("Whoof!");
+  }
+
+  public static void whineForFood() {
+    System.out.println("Feed me, or I will eat your sandwich!");
+  }
 
   public enum HairColor {
     BLACK, WHITE, YELLOW, BROWN
@@ -53,7 +67,7 @@ public class Dog {
   }
 
   public void walk() {
-    this.speed = 1.4;   // set walking speed
+    this.speed = walkingSpeed();   // set walking speed
   }
 
   public void sit() {
@@ -63,13 +77,6 @@ public class Dog {
   public void sleep() {
     this.speed = 0.0;
     System.out.println("Zzzzzz");
-  }
-  public void bark() {
-    System.out.println("Whoof!");
-  }
-
-  public void whineForFood() {
-    System.out.println("Feed me, or I will eat your sandwich!");
   }
 
   public void eat() {
